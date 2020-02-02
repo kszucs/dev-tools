@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Run this script as sudo. The machine should be configured to only permit SSH
+# public key login
+
 set -ex
 
 # script idempotence
@@ -28,4 +31,4 @@ add_ssh_keys jorisvandenbossche
 add_ssh_keys pitrou
 add_ssh_keys nealrichardson
 
-sudo chown -R ursa /home/ursa
+chown -R ursa /home/ursa
